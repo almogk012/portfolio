@@ -113,39 +113,52 @@ export const DATA = {
       href: "https://www.sela.co.il/",
       degree: "Full Stack Programming Development Studies",
       logoUrl: "/sela-black.svg",
-      start: "2016",
-      end: "2016",
+      start: "Jan 2016",
+      end: "Aug 2016",
     },
   ],
   projects: [
-    // {
-    //   title: "Chat Collect",
-    //   href: "https://chatcollect.com",
-    //   dates: "Jan 2024 - Feb 2024",
-    //   active: true,
-    //   description:
-    //     "With the release of the [OpenAI GPT Store](https://openai.com/blog/introducing-the-gpt-store), I decided to build a SaaS which allows users to collect email addresses from their GPT users. This is a great way to build an audience and monetize your GPT API usage.",
-    //   technologies: [
-    //     "Next.js",
-    //     "Typescript",
-    //     "PostgreSQL",
-    //     "Prisma",
-    //     "TailwindCSS",
-    //     "Stripe",
-    //     "Shadcn UI",
-    //     "Magic UI",
-    //   ],
-    //   links: [
-    //     {
-    //       type: "Website",
-    //       href: "https://chatcollect.com",
-    //       icon: <Icons.globe className="size-3" />,
-    //     },
-    //   ],
-    //   image: "",
-    //   video:
-    //     "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
-    // },
+    {
+      title: "Marzevim BaSharon",
+      href: "http://www.marzevimbasharon.co.il",
+      dates: "2015",
+      active: true,
+      description:
+        "As a student, my first project was creating a marketing website for a local business, including development, domain management, and hosting.",
+      technologies: ["AngularJs", "Bootstrap"],
+      links: [
+        {
+          type: "Website",
+          href: "http://www.marzevimbasharon.co.il",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "",
+    },
+    {
+      title: "Notnim Yad",
+      href: "https://notnim-yad.net",
+      dates: "Jan 2025 - Present",
+      active: true,
+      description:
+        "A volunteer project to raise awareness of the abductees through mutual support among people",
+      technologies: [
+        "Vue",
+        "Typescript",
+        "Php",
+        "Nuxt",
+        "TailwindCSS",
+        "Contentful",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://notnim-yad.net",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "",
+    },
   ],
   hackathons: [
     {
