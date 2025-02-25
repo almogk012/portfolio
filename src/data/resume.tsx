@@ -134,6 +134,7 @@ export const DATA = {
         },
       ],
       image: "",
+      video: "",
     },
     {
       title: "Notnim Yad",
@@ -158,6 +159,7 @@ export const DATA = {
         },
       ],
       image: "",
+      video: "",
     },
   ],
   hackathons: [
