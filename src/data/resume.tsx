@@ -133,7 +133,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "/marzevimbasharon.jpg",
+      image: "/marzevim.png",
       video: "",
     },
     {
@@ -158,7 +158,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "/two-yellow-hands.svg",
+      image: "/notnim.png",
       video: "",
     },
   ],
