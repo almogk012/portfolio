@@ -161,6 +161,31 @@ export const DATA = {
       image: "/notnim.png",
       video: "",
     },
+    {
+      title: "Heseim",
+      href: "https://www.heseim.com",
+      dates: "Jan 2025 - Present",
+      active: true,
+      description:
+        "A volunteer project to implement a website for a local business, including development, domain management, and hosting.",
+      technologies: [
+        "Lovable",
+        "React",
+        "Typescript",
+        "Netlify functions",
+        "vite",
+        "TailwindCSS",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://heseim.com",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/heseim.jpg",
+      video: "",
+    },
   ],
   hackathons: [
     {
