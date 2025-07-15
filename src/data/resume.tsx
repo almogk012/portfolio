@@ -1,5 +1,4 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon } from "lucide-react";
 
 export const DATA = {
   name: "Almog Kashany",
@@ -13,15 +12,14 @@ export const DATA = {
   skills: [
     "React",
     "JavaScript",
-    "Typescript",
-    "Node.js",
-    "Docker",
     "Java",
     "C#",
-    "Python",
     "SQL",
     "MongoDB",
+    "Node.js",
     "Redis",
+    "Python",
+    "Docker",
   ],
   navbar: [
     //{ href: "/", icon: HomeIcon, label: "Home" },
@@ -66,7 +64,7 @@ export const DATA = {
       start: "June 2024",
       end: "Present",
       description:
-        "In this role, I designed and implemented new modules for a new integration product with core products on the corporate and cloud services",
+        "In this role, I reached a front-end position and advanced to develop core full-stack features from end to end, working in micro-service architecture, using technologies such as React and Java, based on AWS environment.",
     },
     {
       company: "Microsoft",
@@ -77,10 +75,15 @@ export const DATA = {
       logoUrl: "/msft.jpeg",
       start: "June 2020",
       end: "June 2024",
-      description: `In this role, I led the planning and redesign of a product, including the implementation of React,
-       mentoring new people who arrived, working with cloud services, developing and designing a tool for troubleshooting network and configuration issues,
-        including working directly with customers, in addition to installing the product at a corporation on a site abroad as a representative of the development department.
-      And had the chance to Setting up a new product, which had just completed POC, end-to-end including connecting the product to Microsoft pipelines and creating communication channels with colleagues in parallel groups.`,
+      description: `In this role, I led the planning and redesign product’s UI by migrating AngularJS to React, mentoring new
+                    coworkers who joined to team, working with Azure services, Led development and design of a troubleshooting
+                    tool, including working directly with customers, in addition, to installing the product at a corporation on a site
+                    abroad as a representative of the development department, using technologies such as React, Java, Python,
+                    MySql, Redis, Ubuntu(linux env).
+            And had the chance to joined to A new product in Posture management area, which provides the ability of
+      organizations to apply policies of their endpoints, I led core features end to end, including development
+      and devops tasks on Microsoft pipelines, using technologies such as React, C#, .NET CORE, CosmosDB,
+      Kusto.`,
     },
     {
       company: "CyberX",
