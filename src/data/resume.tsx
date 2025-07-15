@@ -6,8 +6,8 @@ export const DATA = {
   url: "https://almogkashany.com",
   location: "San Francisco, CA",
   description: "Senior Software Engineer",
-  summary:
-    "I am a senior developer with a solid background in both front-end and back-end development, intending to be a leader on a team with technical expertise, encouraging professional growth and allowing for impactful contributions to innovative projects.",
+  summary: `I am a senior software engineer with a solid background in both front and back development, intending to be a leader on a
+team with technical expertise, encouraging professional growth and allowing for impactful contributions to innovative projects.`,
   avatarUrl: "/me.jpg",
   skills: [
     "React",
@@ -63,8 +63,8 @@ export const DATA = {
       logoUrl: "/imperva.png",
       start: "June 2024",
       end: "Present",
-      description:
-        "In this role, I reached a front-end position and advanced to develop core full-stack features from end to end, working in micro-service architecture, using technologies such as React and Java, based on AWS environment.",
+      description: `In this role, I reached a front-end position and advanced to develop core full-stack features from end to end,
+         working in micro-service architecture, using technologies such as React and Java, based on AWS environment.`,
     },
     {
       company: "Microsoft",
