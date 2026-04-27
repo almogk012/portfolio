@@ -6,21 +6,26 @@ export const DATA = {
   url: "https://almogkashany.com",
   location: "Kadima-Zoran, Israel",
   description: "Senior Software Engineer",
-  summary: `I am a senior software engineer with a solid background in both front and back development, intending to be a leader on a
-team with technical expertise, encouraging professional growth and allowing for impactful contributions to innovative projects.`,
+  summary:
+    "Senior Software Engineer with 8+ years building secure, scalable, cloud-native systems across IT, OT and IoT — from data-security platforms to customer-facing dashboards and AI-powered tooling. Lately leveraging LLMs to push both developer workflows and customer-facing capabilities forward.",
   avatarUrl: "/me.jpg",
   skills: [
     "TypeScript",
     "JavaScript",
+    "React",
+    "Next.js",
+    "Node.js",
     "Java",
     "C#",
+    "Python",
+    "Azure",
+    "AWS",
+    "GCP",
     "SQL",
     "PostgreSQL",
     "MongoDB",
-    "Node.js",
     "Redis",
-    "Python",
-    "Docker",
+    "AI / LLM",
   ],
   navbar: [
     //{ href: "/", icon: HomeIcon, label: "Home" },
@@ -97,9 +102,29 @@ team with technical expertise, encouraging professional growth and allowing for 
       title: "Software Engineer · DSPM / FAM",
       logoUrl: "/imperva.png",
       start: "June 2024",
-      end: "Present",
-      description: `In this role, I reached a front-end position and advanced to develop core full-stack features from end to end,
-         working in micro-service architecture, using technologies such as React and Java, based on AWS environment.`,
+      end: "Feb 2026",
+      year: "2024",
+      chapter: "IV",
+      tagline: "Defense in depth",
+      kicker: "Data security, end to end",
+      stack: ["Java", "React", "AWS", "AI / LLM", "SQL"],
+      highlights: [
+        "Led end-to-end delivery of new dashboards and inventory features from scratch",
+        "Designed and shipped RESTful APIs in Java with React-driven frontends",
+        "Owned a production chatbot on AWS Bedrock (Claude) — features and perf",
+        "Worked with large-scale data and DBs to drive real-time insights",
+      ],
+      description:
+        "Owning new features end-to-end on Imperva's DSPM / FAM stack — dashboards, inventory, and a production AWS-Bedrock chatbot. Java APIs, React UI, big data, and an AI surface that does real work for security teams.",
+      theme: {
+        background: "#0a0610",
+        surface: "#170a1f",
+        ink: "#fef2f2",
+        muted: "#fbcfe8",
+        accent: "#ef4444",
+        accent2: "#f97316",
+        glow: "rgba(239, 68, 68, 0.55)",
+      },
     },
     {
       id: "microsoft",
@@ -111,15 +136,29 @@ team with technical expertise, encouraging professional growth and allowing for 
       logoUrl: "/msft.jpeg",
       start: "June 2020",
       end: "June 2024",
-      description: `In this role, I led the planning and redesign product’s UI by migrating AngularJS to React, mentoring new
-                    coworkers who joined to team, working with Azure services, Led development and design of a troubleshooting
-                    tool, including working directly with customers, in addition, to installing the product at a corporation on a site
-                    abroad as a representative of the development department, using technologies such as React, Java, Python,
-                    MySql, Redis, Ubuntu(linux env).
-            And had the chance to joined to A new product in Posture management area, which provides the ability of
-      organizations to apply policies of their endpoints, I led core features end to end, including development
-      and devops tasks on Microsoft pipelines, using technologies such as React, C#, .NET CORE, CosmosDB,
-      Kusto.`,
+      year: "2020",
+      chapter: "III",
+      tagline: "Building at planet scale",
+      kicker: "Four years across two security products",
+      stack: ["React", "Azure", "Java", "C#", "Python"],
+      highlights: [
+        "Led the AngularJS → React modernization of customer-facing apps",
+        "Built support and engineering tools for production troubleshooting",
+        "Shipped E2E features in React, Java, Python, MySQL and Redis",
+        "On Immune — drove core features in React, C# .NET Core, Cosmos DB, Kusto",
+        "Mentored new engineers and represented dev on customer site",
+      ],
+      description:
+        "Four years across two Microsoft security products. On Defender for IoT — led the AngularJS-to-React modernization, built internal troubleshooting tools, and shipped end-to-end with React, Java, Python, MySQL and Redis. On Immune — drove core internal features for endpoint policy with React, C# .NET Core, Cosmos DB and Kusto, plus CI/CD on Microsoft Pipelines.",
+      theme: {
+        background: "#04070f",
+        surface: "#0b1220",
+        ink: "#f8fafc",
+        muted: "#bfdbfe",
+        accent: "#3b82f6",
+        accent2: "#22d3ee",
+        glow: "rgba(59, 130, 246, 0.55)",
+      },
     },
     {
       id: "cyberx",
