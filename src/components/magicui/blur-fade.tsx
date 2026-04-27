@@ -3,6 +3,10 @@
 import { AnimatePresence, motion, useInView, Variants } from "framer-motion";
 import { useRef } from "react";
 
+type UseInViewMargin = NonNullable<
+  NonNullable<Parameters<typeof useInView>[1]>["margin"]
+>;
+
 interface BlurFadeProps {
   children: React.ReactNode;
   className?: string;
@@ -14,7 +18,7 @@ interface BlurFadeProps {
   delay?: number;
   yOffset?: number;
   inView?: boolean;
-  inViewMargin?: string;
+  inViewMargin?: UseInViewMargin;
   blur?: string;
 }
 const BlurFade = ({
@@ -25,7 +29,7 @@ const BlurFade = ({
   delay = 0,
   yOffset = 6,
   inView = false,
-  inViewMargin = "-50px",
+  inViewMargin = "-50px" as UseInViewMargin,
   blur = "6px",
 }: BlurFadeProps) => {
   const ref = useRef(null);

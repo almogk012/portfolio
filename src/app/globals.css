@@ -1,144 +1,238 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../../tailwind.config.mts";
+@custom-variant dark (&:where(.dark, .dark *));
 
 @layer base {
-    :root {
-      --background: 0 0% 100%;
-      --foreground: 210 11.1% 3.53%;
+  :root {
+    --background: 240 24% 4%;
+    --foreground: 210 40% 98%;
 
-      --card: 0 0% 100%;
-      --card-foreground: 210 11.1% 3.53%;
+    --card: 240 24% 4%;
+    --card-foreground: 210 40% 98%;
 
-      --popover: 0 0% 100%;
-      --popover-foreground: 210 11.1% 3.53%;
+    --popover: 240 24% 4%;
+    --popover-foreground: 210 40% 98%;
 
-      --primary: 0 0% 9%;
-      --primary-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 24% 4%;
 
-      --secondary: 0 0% 96.1%;
-      --secondary-foreground: 0 0% 9%;
+    --secondary: 240 6% 12%;
+    --secondary-foreground: 0 0% 98%;
 
-      --muted: 0 0% 96.1%;
-      --muted-foreground: 0 0% 45.1%;
+    --muted: 240 6% 12%;
+    --muted-foreground: 240 5% 65%;
 
-      --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
+    --accent: 240 6% 12%;
+    --accent-foreground: 0 0% 98%;
 
-      --destructive: 0 84.2% 60.2%;
-      --destructive-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 40%;
+    --destructive-foreground: 0 0% 98%;
 
-      --border: 0 0% 89.8%;
-      --input: 0 0% 89.8%;
-      --ring: 0 0% 3.9%;
+    --border: 240 6% 14%;
+    --input: 240 6% 14%;
+    --ring: 240 5% 65%;
 
-      --radius: 0.5rem;
-    }
-
-    .dark {
-      --background: 210 11.1% 3.53%;
-      --foreground: 0 0% 98%;
-
-      --card: 210 11.1% 3.53%;
-      --card-foreground: 0 0% 98%;
-
-      --popover: 210 11.1% 3.53%;
-      --popover-foreground: 0 0% 98%;
-
-      --primary: 0 0% 98%;
-      --primary-foreground: 0 0% 9%;
-
-      --secondary: 0 0% 14.9%;
-      --secondary-foreground: 0 0% 98%;
-
-      --muted: 0 0% 14.9%;
-      --muted-foreground: 0 0% 63.9%;
-
-      --accent: 0 0% 14.9%;
-      --accent-foreground: 0 0% 98%;
-
-      --destructive: 0 62.8% 30.6%;
-      --destructive-foreground: 0 0% 98%;
-
-      --border: 0 0% 14.9%;
-      --input: 0 0% 14.9%;
-      --ring: 0 0% 83.1%;
-    }
+    --radius: 0.75rem;
   }
 
-  @layer base {
-    * {
-      @apply border-border;
-    }
-    body {
-      @apply bg-background text-foreground;
-    }
+  .dark {
+    --background: 240 24% 4%;
+    --foreground: 210 40% 98%;
+    --card: 240 24% 4%;
+    --card-foreground: 210 40% 98%;
+    --popover: 240 24% 4%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 24% 4%;
+    --secondary: 240 6% 12%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 6% 12%;
+    --muted-foreground: 240 5% 65%;
+    --accent: 240 6% 12%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 40%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 6% 14%;
+    --input: 240 6% 14%;
+    --ring: 240 5% 65%;
   }
+}
 
-  h3 code {
-    @apply !text-lg md:!text-xl;
+@layer base {
+  * {
+    @apply border-border;
   }
-  
-  pre {
-    @apply !px-0 rounded-lg overflow-x-auto py-4
+  html {
+    color-scheme: dark;
   }
-   
-  pre [data-line] {
-    @apply px-4
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv11";
   }
+  ::selection {
+    background: rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+  }
+}
 
-  code {
-    @apply text-sm md:text-base !leading-loose;
-  }
-  
-  pre > code {
-    counter-reset: line;
-  }
-  
+/* === Cinematic helpers ============================================ */
+
+.font-display {
+  font-family: var(--font-display), ui-serif, Georgia, serif;
+  font-optical-sizing: auto;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Subtle film-grain over any element */
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.6 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  opacity: 0.06;
+  mix-blend-mode: overlay;
+  z-index: 1;
+}
+
+.grid-lines {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.grid-lines-fine {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.dot-grid {
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.18) 1px,
+    transparent 1px
+  );
+  background-size: 22px 22px;
+}
+
+.scanlines::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.025) 0px,
+    rgba(255, 255, 255, 0.025) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  mix-blend-mode: overlay;
+  z-index: 2;
+}
+
+.radial-vignette {
+  background: radial-gradient(
+    ellipse at center,
+    transparent 30%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+}
+
+/* Big-type tracking */
+.tracking-tightest {
+  letter-spacing: -0.06em;
+}
+
+.gradient-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.h-svh {
+  height: 100vh;
+  height: 100svh;
+}
+.min-h-svh {
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+/* Marquee mask */
+.marquee-mask {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 12%,
+    black 88%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 12%,
+    black 88%,
+    transparent
+  );
+}
+
+/* Hide scrollbar (used on snap container) */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* === Existing code block styles =================================== */
+h3 code {
+  @apply !text-lg md:!text-xl;
+}
+
+pre {
+  @apply !px-0 rounded-lg overflow-x-auto py-4;
+}
+
+pre [data-line] {
+  @apply px-4;
+}
+
+code {
+  @apply text-sm md:text-base !leading-loose;
+}
+
+pre > code {
+  counter-reset: line;
+}
+
+code[data-theme*=" "],
+code[data-theme*=" "] span {
+  color: var(--shiki-light);
+  background-color: var(--shiki-light-bg);
+}
+
+@media (prefers-color-scheme: dark) {
   code[data-theme*=" "],
   code[data-theme*=" "] span {
-    color: var(--shiki-light);
-    background-color: var(--shiki-light-bg);
+    color: var(--shiki-dark);
+    background-color: var(--shiki-dark-bg);
   }
-   
-  @media (prefers-color-scheme: dark) {
-    code[data-theme*=" "],
-    code[data-theme*=" "] span {
-      color: var(--shiki-dark);
-      background-color: var(--shiki-dark-bg);
-    }
-  }
-  
-  code[data-line-numbers] {
-    counter-reset: line;
-  }
-  
-  code[data-line-numbers] > [data-line]::before {
-    counter-increment: line;
-    content: counter(line);
-    @apply inline-block w-4 mr-4 text-right text-gray-500;
-  }
- 
-  code {
-    counter-reset: line;
-  }
- 
-  code > [data-line]::before {
+}
+
+code[data-line-numbers] {
+  counter-reset: line;
+}
+
+code[data-line-numbers] > [data-line]::before {
   counter-increment: line;
   content: counter(line);
- 
-  /* Other styling */
-  display: inline-block;
-  width: 1rem;
-  margin-right: 2rem;
-  text-align: right;
-  color: gray;
-}
- 
-code[data-line-numbers-max-digits="2"] > [data-line]::before {
-  width: 2rem;
-}
- 
-code[data-line-numbers-max-digits="3"] > [data-line]::before {
-  width: 3rem;
+  @apply inline-block w-4 mr-4 text-right text-gray-500;
 }

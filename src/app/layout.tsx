@@ -4,7 +4,11 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
+import {
+  Inter as FontSans,
+  Fraunces as FontDisplay,
+  JetBrains_Mono as FontMono,
+} from "next/font/google";
 import "./globals.css";
 
 const fontSans = FontSans({
@@ -12,10 +16,21 @@ const fontSans = FontSans({
   variable: "--font-sans",
 });
 
+const fontDisplay = FontDisplay({
+  subsets: ["latin"],
+  variable: "--font-display",
+  axes: ["opsz", "SOFT"],
+});
+
+const fontMono = FontMono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
   title: {
-    default: DATA.name,
+    default: `${DATA.name} — ${DATA.description}`,
     template: `%s | ${DATA.name}`,
   },
   description: DATA.description,
@@ -54,14 +69,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="scroll-smooth">
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6",
-          fontSans.variable
+          "min-h-screen bg-[#05060a] text-[#f8fafc] font-sans antialiased overflow-x-hidden",
+          fontSans.variable,
+          fontDisplay.variable,
+          fontMono.variable
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="light">
+        <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark">
           <TooltipProvider delayDuration={0}>
             {children}
             <Navbar />

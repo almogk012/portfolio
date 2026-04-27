@@ -1,8 +1,9 @@
+import { createRequire } from "module";
 import type { Config } from "tailwindcss";
-import { fontFamily } from "tailwindcss/defaultTheme";
+
+const require = createRequire(import.meta.url);
 
 const config = {
-  darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
@@ -20,7 +21,14 @@ const config = {
     },
     extend: {
       fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
+        sans: [
+          "var(--font-sans)",
+          "ui-sans-serif",
+          "system-ui",
+          "sans-serif",
+        ],
+        display: ["var(--font-display)", "ui-serif", "Georgia", "serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "monospace"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -71,10 +79,35 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-50%)" },
+        },
+        "marquee-slow": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-50%)" },
+        },
+        drift: {
+          "0%, 100%": { transform: "translate3d(0,0,0)" },
+          "50%": { transform: "translate3d(0,-12px,0)" },
+        },
+        scan: {
+          "0%": { transform: "translateY(-100%)" },
+          "100%": { transform: "translateY(100vh)" },
+        },
+        twinkle: {
+          "0%, 100%": { opacity: "0.2" },
+          "50%": { opacity: "1" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        marquee: "marquee 38s linear infinite",
+        "marquee-slow": "marquee-slow 80s linear infinite",
+        drift: "drift 7s ease-in-out infinite",
+        scan: "scan 6s linear infinite",
+        twinkle: "twinkle 3s ease-in-out infinite",
       },
     },
   },
