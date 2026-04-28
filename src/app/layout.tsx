@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import {
   Inter as FontSans,
-  Fraunces as FontDisplay,
+  Instrument_Serif as FontDisplay,
   JetBrains_Mono as FontMono,
 } from "next/font/google";
 import "./globals.css";
@@ -18,8 +18,9 @@ const fontSans = FontSans({
 
 const fontDisplay = FontDisplay({
   subsets: ["latin"],
+  weight: ["400"],
+  style: ["normal", "italic"],
   variable: "--font-display",
-  axes: ["opsz", "SOFT"],
 });
 
 const fontMono = FontMono({

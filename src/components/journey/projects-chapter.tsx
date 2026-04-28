@@ -47,14 +47,14 @@ export function ProjectsChapter() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-20%" }}
             transition={{ duration: 0.9, ease: [0.2, 0.8, 0.2, 1] }}
-            className="font-display tracking-tightest"
+            className="font-display italic"
             style={{
               fontSize: "clamp(3rem, 9vw, 9rem)",
-              lineHeight: 0.9,
-              fontWeight: 600,
+              lineHeight: 0.95,
+              letterSpacing: "-0.02em",
             }}
           >
-            <span className="block italic text-white">Selected</span>
+            <span className="block text-white">Selected</span>
             <span className="block bg-gradient-to-r from-violet-300 via-pink-200 to-amber-200 bg-clip-text text-transparent">
               works.
             </span>

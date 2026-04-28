@@ -63,15 +63,14 @@ export function HeroChapter() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: [0.2, 0.8, 0.2, 1] }}
-            className="font-display tracking-tightest text-white"
+            className="font-display italic text-white whitespace-nowrap"
             style={{
-              fontWeight: 600,
-              fontSize: "clamp(3rem, 11vw, 11rem)",
-              lineHeight: 0.85,
+              fontSize: "clamp(2.75rem, 11.5vw, 10rem)",
+              lineHeight: 0.95,
+              letterSpacing: "-0.02em",
             }}
           >
-            <span className="block italic">{first}</span>
-            <span className="block">{last}</span>
+            {first} {last}
           </motion.h1>
 
           <motion.p

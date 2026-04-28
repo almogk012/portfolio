@@ -71,7 +71,7 @@ export function HeroBackground() {
     // Tech satellites — outer ring (outside company orbit)
     // Right cluster (Stealth / Imperva / Microsoft)
     { id: "ai", x: cx + 30, y: cy - 44, label: "AI", tags: ["AI / LLM"] },
-    { id: "ts", x: cx + 80, y: cy - 36, label: "TS", tags: ["TypeScript"] },
+    { id: "pg", x: cx + 80, y: cy - 36, label: "PG", tags: ["PostgreSQL"] },
     { id: "aws", x: cx + 82, y: cy - 14, label: "AWS", tags: ["AWS"] },
     { id: "react", x: cx + 82, y: cy + 8, label: "React", tags: ["React"] },
     { id: "azure", x: cx + 82, y: cy + 30, label: "Azure", tags: ["Azure"] },
@@ -96,10 +96,11 @@ export function HeroBackground() {
     { from: "me", to: "cyberx", traffic: true, weight: 1.4, delay: 1.2, trafficCount: 2 },
     { from: "me", to: "netcraft", traffic: true, weight: 1.4, delay: 1.6, trafficCount: 2 },
 
-    // Stealth stack
+    // Stealth stack — React + Python + Postgres + AI-first (and Cloud)
     { from: "stealth", to: "ai" },
-    { from: "stealth", to: "ts", curve: -2 },
+    { from: "stealth", to: "pg", curve: -2 },
     { from: "stealth", to: "react", curve: -3 },
+    { from: "stealth", to: "py", curve: -18 },
     { from: "stealth", to: "cloud" },
 
     // Imperva stack
@@ -162,18 +163,35 @@ export function StealthBackground({ theme }: { theme: ThemeColors }) {
   const H = 100;
 
   const nodes: GraphNode[] = [
-    // Customer / user
-    { id: "user", x: 14, y: 50, kind: "service", size: 2.4, label: "User" },
+    // Inputs — network telemetry feeding the AI agent (cyber/network domain)
+    {
+      id: "tap",
+      x: 14,
+      y: 28,
+      kind: "service",
+      size: 2.2,
+      label: "Network",
+      sublabel: "Tap",
+    },
+    {
+      id: "events",
+      x: 14,
+      y: 72,
+      kind: "service",
+      size: 2.2,
+      label: "Events",
+      sublabel: "Stream",
+    },
 
-    // The Agent — center of gravity
+    // The Agent — AI-first core
     {
       id: "agent",
-      x: 64,
+      x: 60,
       y: 50,
       kind: "core",
       size: 3.6,
       label: "Agent",
-      sublabel: "Loop",
+      sublabel: "AI-first",
       tags: ["AI / LLM"],
       emphasized: true,
     },
@@ -181,7 +199,7 @@ export function StealthBackground({ theme }: { theme: ThemeColors }) {
     // LLM brain (above)
     {
       id: "llm",
-      x: 64,
+      x: 60,
       y: 18,
       kind: "shield",
       size: 2.8,
@@ -190,35 +208,37 @@ export function StealthBackground({ theme }: { theme: ThemeColors }) {
       tags: ["AI / LLM"],
     },
 
-    // Memory / vector store (below)
+    // Postgres — state of record (below)
     {
-      id: "mem",
-      x: 64,
+      id: "pg",
+      x: 60,
       y: 82,
       kind: "shield",
-      size: 2.4,
-      label: "Memory",
-      sublabel: "Vector",
-      tags: ["Cloud"],
+      size: 2.6,
+      label: "Postgres",
+      sublabel: "State",
+      tags: ["PostgreSQL"],
     },
 
-    // Tools — TS/React/Cloud
+    // Stack — Python services / React UI / Cloud
     {
-      id: "ts",
+      id: "py",
       x: 100,
       y: 28,
       kind: "service",
-      size: 2.2,
-      label: "TS",
-      tags: ["TypeScript"],
+      size: 2.4,
+      label: "Python",
+      sublabel: "Services",
+      tags: ["Python"],
     },
     {
       id: "react",
       x: 100,
       y: 50,
       kind: "service",
-      size: 2.2,
+      size: 2.4,
       label: "React",
+      sublabel: "UI",
       tags: ["React"],
     },
     {
@@ -234,7 +254,7 @@ export function StealthBackground({ theme }: { theme: ThemeColors }) {
     // The sealed product — hinted at, not revealed
     {
       id: "product",
-      x: 138,
+      x: 140,
       y: 50,
       kind: "shield",
       size: 3.2,
@@ -245,24 +265,25 @@ export function StealthBackground({ theme }: { theme: ThemeColors }) {
   ];
 
   const edges: GraphEdge[] = [
-    // user ↔ agent
-    { from: "user", to: "agent", traffic: true, weight: 1.4, trafficCount: 2 },
+    // Network/event telemetry → agent
+    { from: "tap", to: "agent", traffic: true, weight: 1.2, trafficCount: 2 },
+    { from: "events", to: "agent", traffic: true, weight: 1.2, trafficCount: 2, delay: 0.5 },
 
-    // agent ↔ llm (the loop)
+    // agent ↔ llm (the reasoning loop)
     { from: "agent", to: "llm", traffic: true, weight: 1.3, trafficCount: 2 },
     { from: "llm", to: "agent", curve: -8, traffic: true, delay: 0.6 },
 
-    // agent ↔ memory
-    { from: "agent", to: "mem", traffic: true, delay: 0.4 },
-    { from: "mem", to: "agent", curve: -8, traffic: true, delay: 1.2 },
+    // agent ↔ postgres (state)
+    { from: "agent", to: "pg", traffic: true, delay: 0.4 },
+    { from: "pg", to: "agent", curve: -8, traffic: true, delay: 1.2 },
 
-    // agent → tools
-    { from: "agent", to: "ts", traffic: true, delay: 0.3 },
+    // agent → stack
+    { from: "agent", to: "py", traffic: true, delay: 0.3 },
     { from: "agent", to: "react", traffic: true, delay: 0.5 },
     { from: "agent", to: "cloud", traffic: true, delay: 0.7 },
 
-    // tools converge on the sealed product
-    { from: "ts", to: "product", weight: 0.9 },
+    // stack converges on the sealed product
+    { from: "py", to: "product", weight: 0.9 },
     { from: "react", to: "product", weight: 0.9 },
     { from: "cloud", to: "product", weight: 0.9 },
 

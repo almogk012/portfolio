@@ -74,15 +74,15 @@ export const DATA = {
       chapter: "V",
       tagline: "Heads down. Stealth mode.",
       kicker: "The current chapter",
-      stack: ["TypeScript", "React", "AI / LLM", "Cloud"],
+      stack: ["React", "Python", "PostgreSQL", "AI / LLM"],
       highlights: [
-        "Founding engineer on an early-stage AI-native product",
-        "Owning the product from architecture down to the UX details",
-        "Building with LLMs as a core capability, not a feature label",
+        "Founding engineer on an AI-native product at the intersection of cybersecurity and networks",
+        "React, Python, and Postgres — AI-first in every stage of design and implementation",
+        "Owning the product end to end: architecture, services, UI, and ops",
         "More to share when the curtain lifts",
       ],
       description:
-        "Building a new AI-native product end to end — product, architecture, frontend, backend, infrastructure. Quiet for now; more to share when it ships.",
+        "Building a new AI-native product at the intersection of cybersecurity and network intelligence. React on the front, Python services on the back, Postgres for state — and AI woven through every stage of design and implementation. Quiet for now; more to share when it ships.",
       theme: {
         background: "#04050a",
         surface: "#0a0e1c",

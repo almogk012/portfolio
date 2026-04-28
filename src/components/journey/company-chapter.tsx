@@ -126,12 +126,12 @@ export function CompanyChapter({
         className="pointer-events-none absolute right-[-3vw] top-1/2 z-[5] -translate-y-1/2 select-none font-display tracking-tightest"
       >
         <span
-          className="block text-right opacity-[0.06]"
+          className="block text-right italic opacity-[0.06]"
           style={{
             fontSize: "clamp(12rem, 36vw, 36rem)",
             lineHeight: 0.85,
             color: work.theme.ink,
-            fontWeight: 700,
+            letterSpacing: "-0.02em",
           }}
         >
           {work.year}
@@ -192,11 +192,11 @@ export function CompanyChapter({
               </div>
             )}
             <h2
-              className="font-display tracking-tightest"
+              className="font-display italic"
               style={{
                 fontSize: "clamp(2.4rem, 7vw, 6rem)",
-                lineHeight: 0.85,
-                fontWeight: 600,
+                lineHeight: 0.95,
+                letterSpacing: "-0.02em",
                 color: work.theme.ink,
               }}
             >

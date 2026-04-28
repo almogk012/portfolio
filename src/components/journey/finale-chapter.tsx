@@ -58,14 +58,14 @@ export function FinaleChapter() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.9, ease: [0.2, 0.8, 0.2, 1] }}
-            className="mt-8 font-display tracking-tightest text-white"
+            className="mt-8 font-display italic text-white"
             style={{
-              fontSize: "clamp(3.5rem, 12vw, 12rem)",
-              lineHeight: 0.85,
-              fontWeight: 600,
+              fontSize: "clamp(3.5rem, 11vw, 11rem)",
+              lineHeight: 0.95,
+              letterSpacing: "-0.02em",
             }}
           >
-            <span className="block italic">Let&apos;s</span>
+            <span className="block">Let&apos;s</span>
             <span className="block">build something.</span>
           </motion.h2>
 
