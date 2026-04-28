@@ -39,7 +39,7 @@ export function ProjectsChapter() {
             className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.3em] text-white/50"
           >
             <span className="inline-block h-px w-10 bg-white/40" />
-            <span>Side of the desk</span>
+            <span>After hours</span>
           </motion.div>
 
           <motion.h2
@@ -67,8 +67,8 @@ export function ProjectsChapter() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="max-w-xl text-balance text-white/60 sm:text-lg"
           >
-            Beyond the day job — projects I&apos;ve cared enough to ship after
-            hours. Volunteering, friends&apos; businesses, and the odd weekend
+            Beyond the day job — projects worth shipping after hours.
+            Volunteer work, small businesses, and the occasional weekend
             obsession.
           </motion.p>
         </div>

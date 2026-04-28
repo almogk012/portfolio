@@ -7,7 +7,7 @@ export const DATA = {
   location: "Kadima-Zoran, Israel",
   description: "Senior Software Engineer",
   summary:
-    "Senior Software Engineer with 8+ years building secure, scalable, cloud-native systems across IT, OT and IoT — from data-security platforms to customer-facing dashboards and AI-powered tooling. Lately leveraging LLMs to push both developer workflows and customer-facing capabilities forward.",
+    "Senior Software Engineer with 8+ years shipping secure, cloud-native systems across IT, OT, and IoT — from data-security platforms to customer dashboards and AI-powered tooling. Increasingly bringing LLMs into both developer workflows and the products themselves.",
   avatarUrl: "/me.jpg",
   skills: [
     "TypeScript",
@@ -76,13 +76,13 @@ export const DATA = {
       kicker: "The current chapter",
       stack: ["TypeScript", "React", "AI / LLM", "Cloud"],
       highlights: [
-        "Founding-engineer territory on a new AI-native product",
-        "Designing the product from architecture to UX",
-        "AI/LLM doing real work — not party tricks",
+        "Founding engineer on an early-stage AI-native product",
+        "Owning the product from architecture down to the UX details",
+        "Building with LLMs as a core capability, not a feature label",
         "More to share when the curtain lifts",
       ],
       description:
-        "Heads down on a new product where AI does serious work. Building behind a closed door — design, architecture, frontend, backend, infra. The world hears about it when it ships.",
+        "Building a new AI-native product end to end — product, architecture, frontend, backend, infrastructure. Quiet for now; more to share when it ships.",
       theme: {
         background: "#04050a",
         surface: "#0a0e1c",
@@ -110,12 +110,12 @@ export const DATA = {
       stack: ["Java", "React", "AWS", "AI / LLM", "SQL"],
       highlights: [
         "Led end-to-end delivery of new dashboards and inventory features from scratch",
-        "Designed and shipped RESTful APIs in Java with React-driven frontends",
-        "Owned a production chatbot on AWS Bedrock (Claude) — features and perf",
-        "Worked with large-scale data and DBs to drive real-time insights",
+        "Designed and shipped REST APIs in Java alongside the React frontends that consume them",
+        "Owned a production chatbot on AWS Bedrock (Claude), from new features to performance work",
+        "Worked across large-scale datastores to power real-time insights",
       ],
       description:
-        "Owning new features end-to-end on Imperva's DSPM / FAM stack — dashboards, inventory, and a production AWS-Bedrock chatbot. Java APIs, React UI, big data, and an AI surface that does real work for security teams.",
+        "Owning new features end-to-end on Imperva's DSPM and FAM products — dashboards, inventory, and a production chatbot on AWS Bedrock. Java services, a React frontend, large-scale data, and an AI assistant that gives security teams faster answers.",
       theme: {
         background: "#0a0610",
         surface: "#170a1f",
@@ -144,12 +144,12 @@ export const DATA = {
       highlights: [
         "Led the AngularJS → React modernization of customer-facing apps",
         "Built support and engineering tools for production troubleshooting",
-        "Shipped E2E features in React, Java, Python, MySQL and Redis",
-        "On Immune — drove core features in React, C# .NET Core, Cosmos DB, Kusto",
-        "Mentored new engineers and represented dev on customer site",
+        "Shipped end-to-end features in React, Java, Python, MySQL, and Redis",
+        "On Immune — drove core endpoint-policy features in React, C# / .NET Core, Cosmos DB, and Kusto",
+        "Mentored new engineers and represented R&D on a customer site abroad",
       ],
       description:
-        "Four years across two Microsoft security products. On Defender for IoT — led the AngularJS-to-React modernization, built internal troubleshooting tools, and shipped end-to-end with React, Java, Python, MySQL and Redis. On Immune — drove core internal features for endpoint policy with React, C# .NET Core, Cosmos DB and Kusto, plus CI/CD on Microsoft Pipelines.",
+        "Four years on two Microsoft security products. On Defender for IoT — led the AngularJS-to-React modernization, built internal troubleshooting tools, and shipped end-to-end with React, Java, Python, MySQL, and Redis. On Immune — drove core endpoint-policy features with React, C# / .NET Core, Cosmos DB, and Kusto, plus CI/CD on Azure Pipelines.",
       theme: {
         background: "#04070f",
         surface: "#0b1220",
@@ -173,7 +173,7 @@ export const DATA = {
       year: "2018",
       chapter: "II",
       tagline: "Signals on the wire",
-      kicker: "Industrial security, on-prem grit",
+      kicker: "Industrial security, on-prem",
       stack: ["Network Protocols", "Linux", "Python", "On-Prem"],
       highlights: [
         "Developed internal and external product modules end-to-end",
@@ -206,15 +206,15 @@ export const DATA = {
       year: "2017",
       chapter: "I",
       tagline: "Where it all began",
-      kicker: "First client work, real shipping",
+      kicker: "First client work",
       stack: ["AngularJS", "JavaScript", "HTML/CSS"],
       highlights: [
         "Built customer-facing web applications in AngularJS",
-        "Collaborated with designers and backend devs on production UI",
-        "Delivered responsive, brand-true interfaces under real deadlines",
+        "Collaborated with designers and backend engineers on production UI",
+        "Delivered responsive, on-brand interfaces under real client deadlines",
       ],
       description:
-        "First chapter. Customer-facing web apps in AngularJS, working hand-in-hand with designers and backend devs to deliver responsive, production-ready UI under real-world deadlines.",
+        "First chapter. Customer-facing web apps in AngularJS, partnering with designers and backend engineers to deliver responsive, production-ready UI on real client timelines.",
       theme: {
         background: "#1a0c05",
         surface: "#2a1410",
@@ -230,7 +230,7 @@ export const DATA = {
     {
       school: "Sela",
       href: "https://www.sela.co.il/",
-      degree: "Full Stack Programming Development Studies",
+      degree: "Full-Stack Development Program",
       logoUrl: "/sela-black.svg",
       start: "Jan 2016",
       end: "Aug 2016",
@@ -243,8 +243,8 @@ export const DATA = {
       dates: "2015",
       active: true,
       description:
-        "As a student, my first project was creating a marketing website for a local business, including development, domain management, and hosting.",
-      technologies: ["AngularJs", "Bootstrap"],
+        "My first paid project as a student — a marketing site for a local business: build, domain setup, and hosting.",
+      technologies: ["AngularJS", "Bootstrap"],
       links: [
         {
           type: "Website",
@@ -261,11 +261,11 @@ export const DATA = {
       dates: "Jan 2025 - Present",
       active: true,
       description:
-        "A volunteer project to raise awareness of the abductees through mutual support among people",
+        "A volunteer initiative supporting families of the hostages — a community platform for mutual aid and awareness.",
       technologies: [
         "Vue",
-        "Typescript",
-        "Php",
+        "TypeScript",
+        "PHP",
         "Nuxt",
         "TailwindCSS",
         "Contentful",
@@ -286,13 +286,13 @@ export const DATA = {
       dates: "Jan 2025 - Present",
       active: true,
       description:
-        "A volunteer project to implement a website for a local business, including development, domain management, and hosting.",
+        "A pro-bono website for a local business — design, build, and ongoing hosting.",
       technologies: [
         "Lovable",
         "React",
-        "Typescript",
-        "Netlify functions",
-        "vite",
+        "TypeScript",
+        "Netlify Functions",
+        "Vite",
         "TailwindCSS",
       ],
       links: [
@@ -310,9 +310,9 @@ export const DATA = {
     {
       title: "Microsoft Global Hackathon 2022 Award Winner",
       dates: "2022",
-      location: "Herzeliya",
+      location: "Herzliya",
       description:
-        "Developed set of music boxes which play the full song when the user matched the correct order of the music hints.",
+        "Built a set of musical boxes that play a full song once the player matches the correct order of audio hints.",
       links: [],
       image: "",
     },

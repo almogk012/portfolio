@@ -80,8 +80,8 @@ export function HeroChapter() {
             transition={{ duration: 0.7, delay: 0.5 }}
             className="mt-8 max-w-xl text-balance text-sm text-white/70 sm:text-base"
           >
-            {DATA.description}. Eight+ years across cybersecurity, cloud and
-            AI-native systems — shipping software that real teams lean on.
+            {DATA.description}. 8+ years across cybersecurity, cloud, and
+            AI-native systems — shipping software that real teams rely on.
           </motion.p>
 
           <motion.div

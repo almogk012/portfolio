@@ -76,8 +76,8 @@ export function FinaleChapter() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="mt-8 max-w-xl text-balance text-white/65 sm:text-lg"
           >
-            Got a hard problem, a small team, or a wild idea? I&apos;m good
-            company on either side of the keyboard.
+            Got a hard problem, a small team, or a wild idea? Happy to plug
+            in — as an engineer, a sounding board, or both.
           </motion.p>
 
           <motion.div
@@ -123,7 +123,7 @@ export function FinaleChapter() {
             </div>
             <div>
               <div className="text-white/55">Status</div>
-              <div className="mt-1.5 text-white/85">Open</div>
+              <div className="mt-1.5 text-cyan-300/90">Stealth</div>
             </div>
             <div>
               <div className="text-white/55">Made with</div>
